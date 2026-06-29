@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables (contains API keys)
+.env
+.env.*
+
+# IDEs
+.vscode/
+.idea/
+
+# Runtime output
+runtime_data/
+reports/
+logs/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Python build
+build/
+dist/
+*.egg-info/
+
+# Test cache
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Temporary files
+*.tmp
+*.bak
