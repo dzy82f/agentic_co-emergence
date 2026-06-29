@@ -1,0 +1,19 @@
+id: ethical-governance-001
+title: Ethical Governance Under Technological Acceleration
+question: What should ethical governance look like when technological systems outrun the moral, legal and institutional frameworks meant to govern them?
+domain: Ethical governance of fast-moving technological systems
+constraints:
+  - Understanding must precede judgement.
+  - Synthesis must not occur before exploration and challenge.
+  - Governance ownership remains with the Formal Organisation.
+required_perspectives:
+  - epistemic clarity
+  - governance and accountability
+  - ethical risk
+  - practical implementation
+success_criteria:
+  - The inquiry clarifies the problem envelope.
+  - The inquiry exposes competing values and risks.
+  - The synthesis remains reviewable and non-final until approved.
+minimum_explorations: 2
+minimum_challenges: 1
