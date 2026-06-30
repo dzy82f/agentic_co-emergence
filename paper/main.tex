@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{tychevia}
+
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\FooterLogoHeight}{12mm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{28pt}
+
+\fancyfoot[C]{%
+  \raisebox{0pt}[\FooterLogoHeight][0pt]{\footnotesize \thepage}%
+}
+
+\fancyfoot[R]{%
+  \href{https://glandore.com/}{%
+    \raisebox{0pt}[\FooterLogoHeight][0pt]{%
+      \includegraphics[height=\FooterLogoHeight]{AI_large_1.png}%
+    }%
+  }%
+}%
+
+\fancypagestyle{lastpageleftfooter}{%
+  \fancyhf{}%
+  \renewcommand{\footrulewidth}{0pt}%
+
+  \fancyfoot[L]{%
+    \raisebox{24pt}[\FooterLogoHeight][24pt]{%
+      \parbox[t]{.58\textwidth}{\footnotesize
+        \textbf{Attribution format}:\\
+        Originally authored by Glandore Associates,\\
+        shared under \href{https://glandore.com/wp-content/uploads/2025/09/Attribution_v1_0.pdf}{CC BY-SA 4.0}.%
+      }%
+    }%
+  }%
+
+  \fancyfoot[C]{%
+    \raisebox{0pt}[\FooterLogoHeight][0pt]{\footnotesize \thepage}%
+  }%
+
+  \fancyfoot[R]{%
+    \href{https://glandore.com/}{%
+      \raisebox{0pt}[\FooterLogoHeight][0pt]{%
+        \includegraphics[height=\FooterLogoHeight]{AI_large_1.png}%
+      }%
+    }%
+  }%
+}
+
+\begin{document}
+
+\input{body_v0.1}
+
+\thispagestyle{lastpageleftfooter}
+
+\end{document}
