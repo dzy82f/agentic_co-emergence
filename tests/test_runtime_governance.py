@@ -1,8 +1,8 @@
 import pytest
 
-from agentic_reasoning.core.runtime import AgenticReasoningRuntime, GovernanceError
-from agentic_reasoning.models.inquiry import Contribution, InquiryEnvelope
-from agentic_reasoning.models.state import InquiryState
+from agentic_co_emergence.core.runtime import AgenticReasoningRuntime, GovernanceError
+from agentic_co_emergence.models.inquiry import Contribution, InquiryEnvelope
+from agentic_co_emergence.models.state import InquiryState
 
 
 def envelope() -> InquiryEnvelope:

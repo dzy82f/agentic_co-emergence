@@ -3,14 +3,14 @@ from pathlib import Path
 
 import yaml
 
-from agentic_reasoning.core.runtime import AgenticReasoningRuntime
-from agentic_reasoning.models.inquiry import Contribution, InquiryEnvelope
-from agentic_reasoning.models.state import InquiryState
+from agentic_co_emergence.core.runtime import AgenticReasoningRuntime
+from agentic_co_emergence.models.inquiry import Contribution, InquiryEnvelope
+from agentic_co_emergence.models.state import InquiryState
 
 
 def main() -> int:
     if len(sys.argv) != 2:
-        print("Usage: python -m agentic_reasoning.cli.run <inquiry.yaml>")
+        print("Usage: python -m agentic_co_emergence.cli.run <inquiry.yaml>")
         return 2
 
     path = Path(sys.argv[1])

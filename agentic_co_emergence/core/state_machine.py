@@ -1,4 +1,4 @@
-from agentic_reasoning.models.state import InquiryState
+from agentic_co_emergence.models.state import InquiryState
 
 
 ALLOWED_TRANSITIONS: dict[InquiryState, set[InquiryState]] = {

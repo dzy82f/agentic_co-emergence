@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from agentic_reasoning.models.event import LedgerEvent
+from agentic_co_emergence.models.event import LedgerEvent
 
 
 class FileLedger:

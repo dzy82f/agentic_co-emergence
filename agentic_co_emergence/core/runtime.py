@@ -1,9 +1,9 @@
 from pathlib import Path
 
-from agentic_reasoning.core.state_machine import validate_transition
-from agentic_reasoning.models.inquiry import Contribution, InquiryEnvelope
-from agentic_reasoning.models.state import InquiryState
-from agentic_reasoning.storage.ledger import FileLedger
+from agentic_co_emergence.core.state_machine import validate_transition
+from agentic_co_emergence.models.inquiry import Contribution, InquiryEnvelope
+from agentic_co_emergence.models.state import InquiryState
+from agentic_co_emergence.storage.ledger import FileLedger
 
 
 class GovernanceError(ValueError):

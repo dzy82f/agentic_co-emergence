@@ -1,7 +1,7 @@
 import pytest
 
-from agentic_reasoning.core.state_machine import InvalidTransitionError, validate_transition
-from agentic_reasoning.models.state import InquiryState
+from agentic_co_emergence.core.state_machine import InvalidTransitionError, validate_transition
+from agentic_co_emergence.models.state import InquiryState
 
 
 def test_valid_transition():
