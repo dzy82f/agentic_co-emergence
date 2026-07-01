@@ -1,0 +1,5 @@
+cd "C:\Users\julia_exuztfd\OneDrive\Portfolio\chatGPT\Applications\agentic_co_emergence_v0_1"
+
+tree agentic_co_emergence /F
+
+python -m agentic_co_emergence.cli.run "What should ethical governance look like?"

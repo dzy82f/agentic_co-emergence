@@ -1,0 +1,102 @@
+{
+  "name": "Tychevia Runtime v8 Policy",
+  "version": "8.0",
+  "memory_space_id": "tychevia-organisational-memory",
+  "minimum_rounds": 3,
+  "handoff_required": true,
+  "facilitator_silent": true,
+  "initial_speaker": "Tenzing",
+  "active_agents": [
+    "Tenzing",
+    "Aletheia",
+    "Joan",
+    "Alison",
+    "Lyla",
+    "Ada",
+    "Sael",
+    "Synaia",
+    "Harry"
+  ],
+  "state_protocols": {
+    "IDLE": [],
+    "STARTUP": [
+      "constitution",
+      "chat_startup"
+    ],
+    "ISSUE_CAPTURE": [
+      "constitution",
+      "issue_capture"
+    ],
+    "ISSUE_FRAMING": [
+      "constitution",
+      "issue_framing"
+    ],
+    "DISCUSSION": [
+      "constitution",
+      "adsn_protocol",
+      "agent_personas"
+    ],
+    "ROUND_CHECK": [
+      "constitution",
+      "round_check"
+    ],
+    "SYNTHESIS": [
+      "constitution",
+      "synthesis_protocol"
+    ],
+    "REVIEW": [
+      "constitution",
+      "review_protocol"
+    ],
+    "ARCHIVE": [
+      "archive_protocol"
+    ]
+  },
+  "transitions": {
+    "IDLE": {
+      "on_user_input": "STARTUP"
+    },
+    "STARTUP": {
+      "on_accepted_output": "ISSUE_CAPTURE"
+    },
+    "ISSUE_CAPTURE": {
+      "on_accepted_output": "ISSUE_FRAMING"
+    },
+    "ISSUE_FRAMING": {
+      "on_accepted_output": "DISCUSSION"
+    },
+    "DISCUSSION": {
+      "on_accepted_output": [
+        {
+          "if": "round_complete_after_turn",
+          "next": "ROUND_CHECK"
+        },
+        {
+          "next": "DISCUSSION"
+        }
+      ]
+    },
+    "ROUND_CHECK": {
+      "on_accepted_output": [
+        {
+          "if": "minimum_rounds_complete",
+          "next": "SYNTHESIS"
+        },
+        {
+          "next": "DISCUSSION"
+        }
+      ]
+    },
+    "SYNTHESIS": {
+      "on_accepted_output": "REVIEW"
+    },
+    "REVIEW": {
+      "on_accepted_output": "ARCHIVE"
+    }
+  },
+  "adsn": {
+    "allow_self_handoff": false,
+    "avoid_repeating_previous_speaker": true,
+    "require_reasonable_handoff": true
+  }
+}

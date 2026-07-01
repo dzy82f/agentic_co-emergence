@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-co-emergence-v0-1"
+version = "0.1.0"
+description = "Agentic Co-Emergence v0.1 runtime package"
+requires-python = ">=3.11"
+dependencies = [
+  "openai>=2.0.0",
+  "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["agentic_co_emergence*"]
+exclude = ["docs*", "examples*", "tests*", "runtime_data*", "reports*"]
+
+[tool.setuptools.package-data]
+"agentic_co_emergence.core" = ["runtime_policy.json"]
+"agentic_co_emergence.personas" = ["*.md"]
+"agentic_co_emergence.protocols" = ["*.md"]
